@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /mail.php
+Disallow: /success.html
+Disallow: /error.html
+
+Sitemap: https://iconbiotronics.com/sitemap.xml
