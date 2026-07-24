@@ -1571,3 +1571,686 @@ input[type="submit"]:disabled {
   transform: translateY(0);
   pointer-events: auto;
 }
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
+
+.services-page {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.main-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-inline: max(20px, calc((100% - var(--container)) / 2));
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+}
+
+.main-navigation > ul {
+  margin: 0;
+}
+
+.main-navigation .logo img {
+  width: auto;
+  max-width: 210px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.desktop-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.desktop-navigation a {
+  padding: 12px 13px;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.desktop-navigation a.active {
+  color: var(--secondary);
+}
+
+.desktop-navigation a[role="button"] {
+  margin-left: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+  color: var(--white);
+}
+
+.mobile-menu-button {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  background: var(--light-blue);
+  color: var(--primary);
+}
+
+.services-hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 17, 31, 0.96),
+      rgba(6, 17, 31, 0.58)
+    ),
+    url("../images/services/services-hero.jpg") center / cover no-repeat;
+}
+
+.services-introduction,
+.service-directory,
+.service-process-section,
+.maintenance-contracts,
+.service-benefits,
+.services-faq {
+  width: min(var(--container), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.services-introduction {
+  padding: 110px 0;
+}
+
+.services-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(370px, 0.95fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.services-intro-copy .section-tag,
+.maintenance-copy .section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.services-intro-copy h2,
+.maintenance-copy h2 {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.17;
+  letter-spacing: -0.035em;
+}
+
+.services-intro-copy p,
+.maintenance-copy > p {
+  color: var(--text-muted);
+}
+
+.services-intro-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 20px;
+  margin-top: 28px;
+}
+
+.services-intro-features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.services-intro-features i {
+  color: var(--accent);
+}
+
+.services-intro-image {
+  position: relative;
+}
+
+.services-intro-image figure {
+  margin: 0;
+}
+
+.services-intro-image img {
+  width: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.services-intro-image figcaption {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.services-floating-card {
+  position: absolute;
+  left: -32px;
+  bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 250px;
+  padding: 22px;
+  border: 5px solid var(--white);
+  border-radius: 20px;
+  background: var(--gradient-accent);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.services-floating-card i {
+  font-size: 1.8rem;
+}
+
+.services-floating-card strong,
+.services-floating-card span {
+  display: block;
+}
+
+.services-floating-card strong {
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.services-floating-card span {
+  font-size: 0.75rem;
+}
+
+.service-directory {
+  padding: 110px 0;
+}
+
+.service-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.directory-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.directory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.directory-card.featured-service {
+  grid-column: span 2;
+}
+
+.directory-image {
+  height: 230px;
+  overflow: hidden;
+}
+
+.featured-service .directory-image {
+  height: 300px;
+}
+
+.directory-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.directory-card:hover .directory-image img {
+  transform: scale(1.06);
+}
+
+.directory-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px;
+}
+
+.directory-icon {
+  width: 55px;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -58px;
+  margin-bottom: 18px;
+  border: 5px solid var(--white);
+  border-radius: 17px;
+  background: var(--gradient-accent);
+  color: var(--white);
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-category {
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.directory-content h3 {
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  font-size: 1.24rem;
+}
+
+.directory-content p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.directory-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 24px;
+}
+
+.directory-content li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 0.82rem;
+}
+
+.directory-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.directory-content > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.directory-content > a i {
+  transition: transform var(--transition);
+}
+
+.directory-content > a:hover i {
+  transform: translateX(5px);
+}
+
+.service-process-section {
+  padding: 110px 0;
+}
+
+.service-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-process-grid article {
+  position: relative;
+  padding: 34px 27px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-process-grid article > span {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: rgba(0, 168, 232, 0.09);
+  font-size: 3.4rem;
+  font-weight: 800;
+}
+
+.service-process-grid i {
+  width: 55px;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 17px;
+  background: var(--light-blue);
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+.service-process-grid h3 {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+}
+
+.service-process-grid p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.maintenance-contracts {
+  padding: 110px 0;
+}
+
+.maintenance-contracts-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.maintenance-image img {
+  width: 100%;
+  min-height: 650px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.contract-options {
+  display: grid;
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.contract-options article {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 17px;
+  align-items: start;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--off-white);
+}
+
+.contract-options i {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: var(--gradient-accent);
+  color: var(--white);
+}
+
+.contract-options h3 {
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.contract-options p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.service-benefits {
+  padding: 110px 0;
+}
+
+.service-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-benefits-grid article {
+  padding: 34px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-benefits-grid i {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 21px;
+  border-radius: 17px;
+  background: var(--gradient-accent);
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.service-benefits-grid h3 {
+  margin-bottom: 9px;
+  color: var(--text-dark);
+  font-size: 1.08rem;
+}
+
+.service-benefits-grid p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.87rem;
+}
+
+.services-faq {
+  padding: 110px 0;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.faq-list details {
+  margin-bottom: 14px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-list summary {
+  padding: 22px 24px;
+  color: var(--text-dark);
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-list details p {
+  padding: 0 24px 22px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.services-cta .hero-buttons {
+  justify-content: center;
+}
+
+.service-enquiry-strip {
+  margin: 70px 0;
+  padding: 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-dark);
+  color: var(--white);
+}
+
+.service-enquiry-strip h2,
+.service-enquiry-strip h3 {
+  color: var(--white);
+}
+
+.service-enquiry-strip h3 {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+.service-enquiry-strip input {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.service-enquiry-strip button {
+  border: 0;
+  background: var(--gradient-accent);
+  color: var(--white);
+}
+
+@media (max-width: 1050px) {
+  .service-directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .directory-card.featured-service {
+    grid-column: span 2;
+  }
+
+  .service-benefits-grid,
+  .service-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 920px) {
+  .desktop-navigation {
+    position: fixed;
+    inset: 82px 0 auto 0;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.99);
+    box-shadow: var(--shadow-md);
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  .desktop-navigation.open {
+    max-height: 520px;
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  .desktop-navigation li {
+    width: 100%;
+  }
+
+  .desktop-navigation a {
+    display: block;
+    width: 100%;
+  }
+
+  .desktop-navigation a[role="button"] {
+    margin: 8px 0 0;
+    text-align: center;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+  }
+
+  .services-intro-grid,
+  .maintenance-contracts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-intro-image,
+  .maintenance-image {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .main-navigation {
+    min-height: 72px;
+    padding-inline: 14px;
+  }
+
+  .main-navigation .logo img {
+    max-width: 175px;
+    height: 42px;
+  }
+
+  .desktop-navigation {
+    inset: 72px 0 auto 0;
+  }
+
+  .services-introduction,
+  .service-directory,
+  .service-process-section,
+  .maintenance-contracts,
+  .service-benefits,
+  .services-faq {
+    width: min(100% - 28px, var(--container));
+    padding: 78px 0;
+  }
+
+  .services-intro-features,
+  .service-directory-grid,
+  .service-process-grid,
+  .service-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-card.featured-service {
+    grid-column: auto;
+  }
+
+  .featured-service .directory-image,
+  .directory-image {
+    height: 230px;
+  }
+
+  .services-floating-card {
+    left: 14px;
+    bottom: 36px;
+  }
+
+  .services-intro-image img,
+  .maintenance-image img {
+    min-height: 440px;
+  }
+
+  .service-enquiry-strip {
+    padding: 28px 22px;
+  }
+}
