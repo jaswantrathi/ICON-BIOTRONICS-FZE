@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Terms of Service | ICON BIOTRONICS</title>
+
+  <meta
+    name="description"
+    content="Read the ICON BIOTRONICS terms governing website use, biomedical engineering enquiries, quotations, technical services, warranties, and liability."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://iconbiotronics.com/terms.html"
+  >
+
+  <meta
+    property="og:title"
+    content="Terms of Service | ICON BIOTRONICS"
+  >
+
+  <meta
+    property="og:description"
+    content="Terms governing use of the ICON BIOTRONICS website and biomedical engineering service enquiries."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:url"
+    content="https://iconbiotronics.com/terms.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    :root {
+      --brand-dark: #071b2c;
+      --brand-deep: #0b2f47;
+      --brand: #00a8e8;
+      --brand-secondary: #0ec5b5;
+      --text: #173042;
+      --muted: #687986;
+      --surface: #ffffff;
+      --soft: #f4f9fc;
+      --border: #dce8ef;
+      --shadow: 0 20px 60px rgba(6, 34, 52, 0.11);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--surface);
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .container-fluid {
+      width: min(1320px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: var(--brand-dark);
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.78rem;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 9px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: inherit;
+    }
+
+    .topbar i {
+      margin-right: 6px;
+      color: #8de8ff;
+    }
+
+    .main-navigation {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(220, 232, 239, 0.85);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+    }
+
+    .main-navigation ul {
+      align-items: center;
+      margin: 0;
+    }
+
+    .main-navigation strong a {
+      color: var(--brand-dark);
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .main-navigation a {
+      color: var(--text);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .main-navigation a[role="button"] {
+      border: 0;
+      background: linear-gradient(
+        135deg,
+        var(--brand),
+        var(--brand-secondary)
+      );
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--brand-dark);
+    }
+
+    main.container {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 500px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 27, 44, 0.97) 0%,
+          rgba(7, 27, 44, 0.84) 52%,
+          rgba(7, 27, 44, 0.42) 100%
+        ),
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -140px;
+      right: -120px;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: rgba(0, 168, 232, 0.18);
+      filter: blur(14px);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 105px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #8de8ff;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 18px 0;
+      color: #ffffff;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.85;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.78rem;
+    }
+
+    .breadcrumb a {
+      color: #ffffff;
+    }
+
+    .terms-section {
+      padding: 100px 0;
+      background: var(--soft);
+    }
+
+    .terms-layout {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .terms-navigation {
+      position: sticky;
+      top: 110px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 12px 35px rgba(6, 34, 52, 0.06);
+    }
+
+    .terms-navigation h2 {
+      margin-bottom: 16px;
+      color: var(--brand-dark);
+      font-size: 1rem;
+    }
+
+    .terms-navigation ul {
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .terms-navigation li {
+      margin: 0;
+    }
+
+    .terms-navigation a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      transition: 0.2s ease;
+    }
+
+    .terms-navigation a:hover,
+    .terms-navigation a:focus {
+      color: var(--brand);
+      background: var(--soft);
+    }
+
+    .terms-document {
+      padding: 46px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .terms-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .terms-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .terms-meta i {
+      color: var(--brand);
+    }
+
+    .terms-intro {
+      margin-bottom: 38px;
+      padding: 24px;
+      border-left: 4px solid var(--brand);
+      border-radius: 0 16px 16px 0;
+      background: var(--soft);
+    }
+
+    .terms-intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .terms-block {
+      padding: 34px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 120px;
+    }
+
+    .terms-block:first-of-type {
+      border-top: 0;
+    }
+
+    .terms-block h2 {
+      margin-bottom: 14px;
+      color: var(--brand-dark);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .terms-block h3 {
+      margin: 24px 0 10px;
+      color: var(--brand-deep);
+      font-size: 1rem;
+    }
+
+    .terms-block p,
+    .terms-block li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .terms-block ul,
+    .terms-block ol {
+      padding-left: 22px;
+    }
+
+    .terms-block li {
+      margin-bottom: 8px;
+    }
+
+    .terms-block a {
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    .terms-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .highlight-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--soft);
+    }
+
+    .highlight-card i {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--brand);
+      font-size: 1.25rem;
+    }
+
+    .highlight-card strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--brand-dark);
+      font-size: 0.88rem;
+    }
+
+    .highlight-card span {
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.6;
+    }
+
+    .notice-box {
+      margin: 26px 0;
+      padding: 22px;
+      border: 1px solid #cfe5ee;
+      border-radius: 16px;
+      background: #f0fbff;
+    }
+
+    .notice-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--brand-dark);
+    }
+
+    .notice-box p {
+      margin: 0;
+    }
+
+    .contact-box {
+      margin-top: 26px;
+      padding: 24px;
+      border-radius: 18px;
+      background: linear-gradient(
+        135deg,
+        var(--brand-dark),
+        var(--brand-deep)
+      );
+      color: #ffffff;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .contact-box p,
+    .contact-box a {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .contact-box a {
+      font-weight: 700;
+    }
+
+    .subscribe {
+      padding: 0 0 70px;
+      background: var(--soft);
+    }
+
+    .subscribe article {
+      padding: 34px;
+      border-radius: 22px;
+      background: linear-gradient(
+        135deg,
+        var(--brand-dark),
+        var(--brand-deep)
+      );
+      color: #ffffff;
+    }
+
+    .subscribe h2,
+    .subscribe h3 {
+      color: #ffffff;
+    }
+
+    .subscribe h3 {
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .subscribe input {
+      background: #ffffff;
+    }
+
+    .subscribe button {
+      border: 0;
+      background: linear-gradient(
+        135deg,
+        var(--brand),
+        var(--brand-secondary)
+      );
+    }
+
+    footer {
+      padding: 34px 0 50px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    footer small {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    .floating-actions {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1200;
+      display: grid;
+      gap: 10px;
+    }
+
+    .floating-actions a {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .call-float {
+      background: var(--brand);
+    }
+
+    .whatsapp-float {
+      background: #25d366;
+    }
+
+    @media (max-width: 960px) {
+      .terms-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-navigation {
+        position: static;
+      }
+
+      .terms-highlight {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .desktop-navigation {
+        position: fixed;
+        top: 75px;
+        right: 16px;
+        left: 16px;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: var(--shadow);
+      }
+
+      .desktop-navigation.active {
+        display: flex;
+      }
+
+      .desktop-navigation li,
+      .desktop-navigation a {
+        width: 100%;
+      }
+
+      .mobile-menu-button {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 430px;
+      }
+
+      .hero-inner {
+        padding: 78px 0;
+      }
+
+      .terms-section {
+        padding: 70px 0;
+      }
+
+      .terms-document {
+        padding: 28px 20px;
+      }
+
+      .terms-navigation {
+        padding: 20px;
+      }
+
+      .subscribe article {
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container">
+
+      <span>
+        <i class="fa-solid fa-phone"></i>
+
+        <a href="tel:+971553252589">
+          +971 55 325 2589
+        </a>
+      </span>
+
+      <span>
+        <i class="fa-solid fa-envelope"></i>
+
+        <a href="mailto:iconbiotronics.uae@gmail.com">
+          iconbiotronics.uae@gmail.com
+        </a>
+      </span>
+
+      <span>
+        <i class="fa-solid fa-location-dot"></i>
+        Dubai, United Arab Emirates
+      </span>
+
+    </div>
+  </div>
+
+  <nav class="container-fluid main-navigation">
+
+    <ul>
+      <li>
+        <strong>
+          <a href="index.html">
+            ICON BIOTRONICS
+          </a>
+        </strong>
+      </li>
+    </ul>
+
+    <ul class="desktop-navigation">
+
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="services.html">
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a href="gallery.html">
+          Gallery
+        </a>
+      </li>
+
+      <li>
+        <a href="certifications.html">
+          Certifications
+        </a>
+      </li>
+
+      <li>
+        <a href="contact.html" role="button">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+    <button
+      id="menuButton"
+      class="mobile-menu-button"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </nav>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="container hero-inner">
+
+        <span class="eyebrow">
+          <i class="fa-solid fa-file-contract"></i>
+          Website and Service Terms
+        </span>
+
+        <h1>
+          Terms of Service
+        </h1>
+
+        <p>
+          These terms govern use of the ICON BIOTRONICS website and general
+          communications relating to biomedical engineering services,
+          quotations, maintenance, repairs, inspections, calibration, and
+          technical support.
+        </p>
+
+        <div class="breadcrumb">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <span>
+            Terms of Service
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="terms-section">
+
+      <div class="container terms-layout">
+
+        <aside class="terms-navigation">
+
+          <h2>
+            Terms Sections
+          </h2>
+
+          <ul>
+
+            <li>
+              <a href="#acceptance">
+                1. Acceptance
+              </a>
+            </li>
+
+            <li>
+              <a href="#website-use">
+                2. Website Use
+              </a>
+            </li>
+
+            <li>
+              <a href="#information">
+                3. Website Information
+              </a>
+            </li>
+
+            <li>
+              <a href="#enquiries">
+                4. Enquiries
+              </a>
+            </li>
+
+            <li>
+              <a href="#quotations">
+                5. Quotations
+              </a>
+            </li>
+
+            <li>
+              <a href="#services">
+                6. Technical Services
+              </a>
+            </li>
+
+            <li>
+              <a href="#customer-responsibilities">
+                7. Customer Responsibilities
+              </a>
+            </li>
+
+            <li>
+              <a href="#parts">
+                8. Parts and Materials
+              </a>
+            </li>
+
+            <li>
+              <a href="#payment">
+                9. Payment
+              </a>
+            </li>
+
+            <li>
+              <a href="#warranties">
+                10. Warranties
+              </a>
+            </li>
+
+            <li>
+              <a href="#liability">
+                11. Liability
+              </a>
+            </li>
+
+            <li>
+              <a href="#intellectual-property">
+                12. Intellectual Property
+              </a>
+            </li>
+
+            <li>
+              <a href="#third-party">
+                13. Third-Party Services
+              </a>
+            </li>
+
+            <li>
+              <a href="#privacy">
+                14. Privacy
+              </a>
+            </li>
+
+            <li>
+              <a href="#law">
+                15. Governing Law
+              </a>
+            </li>
+
+            <li>
+              <a href="#changes">
+                16. Changes
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                17. Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </aside>
+
+        <article class="terms-document">
+
+          <div class="terms-meta">
+
+            <span>
+              <i class="fa-solid fa-calendar"></i>
+              Effective date: 24 July 2026
+            </span>
+
+            <span>
+              <i class="fa-solid fa-rotate"></i>
+              Last updated: 24 July 2026
+            </span>
+
+            <span>
+              <i class="fa-solid fa-location-dot"></i>
+              United Arab Emirates
+            </span>
+
+          </div>
+
+          <div class="terms-intro">
+
+            <p>
+              These Terms of Service provide general rules for use of this
+              website and preliminary service communications. Specific
+              quotations, contracts, purchase orders, maintenance agreements,
+              warranties, and project documents may contain additional terms
+              that take priority where applicable.
+            </p>
+
+          </div>
+
+          <div class="terms-highlight">
+
+            <div class="highlight-card">
+
+              <i class="fa-solid fa-globe"></i>
+
+              <strong>
+                Website Use
+              </strong>
+
+              <span>
+                Use this website only for lawful business and service-related
+                purposes.
+              </span>
+
+            </div>
+
+            <div class="highlight-card">
+
+              <i class="fa-solid fa-file-signature"></i>
+
+              <strong>
+                Written Confirmation
+              </strong>
+
+              <span>
+                Website enquiries do not create a service contract or confirm
+                availability.
+              </span>
+
+            </div>
+
+            <div class="highlight-card">
+
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+
+              <strong>
+                Technical Scope
+              </strong>
+
+              <span>
+                Service scope, pricing, timing, and warranties must be defined
+                in writing.
+              </span>
+
+            </div>
+
+          </div>
+
+          <section
+            id="acceptance"
+            class="terms-block"
+          >
+
+            <h2>
+              1. Acceptance of These Terms
+            </h2>
+
+            <p>
+              By accessing or using this website, submitting an enquiry, or
+              communicating with ICON BIOTRONICS through website features,
+              you agree to these Terms of Service.
+            </p>
+
+            <p>
+              If you do not agree with these terms, you should stop using the
+              website and avoid submitting information through it.
+            </p>
+
+          </section>
+
+          <section
+            id="website-use"
+            class="terms-block"
+          >
+
+            <h2>
+              2. Permitted Website Use
+            </h2>
+
+            <p>
+              You may use this website for legitimate purposes, including:
+            </p>
+
+            <ul>
+              <li>Learning about biomedical engineering services.</li>
+              <li>Requesting quotations or technical information.</li>
+              <li>Submitting equipment service enquiries.</li>
+              <li>Reviewing qualifications, certifications, and capabilities.</li>
+              <li>Contacting ICON BIOTRONICS for business purposes.</li>
+            </ul>
+
+            <p>
+              You must not:
+            </p>
+
+            <ul>
+              <li>Use the website for unlawful, fraudulent, or harmful activity.</li>
+              <li>Submit false, misleading, or unauthorised information.</li>
+              <li>Attempt to gain unauthorised access to systems or data.</li>
+              <li>Introduce malware, automated attacks, or disruptive code.</li>
+              <li>Copy, scrape, or reuse website content unlawfully.</li>
+              <li>Impersonate another person, company, or healthcare facility.</li>
+              <li>Interfere with website availability, security, or performance.</li>
+            </ul>
+
+          </section>
+
+          <section
+            id="information"
+            class="terms-block"
+          >
+
+            <h2>
+              3. Website Information
+            </h2>
+
+            <p>
+              Website content is provided for general informational purposes.
+              We aim to keep information accurate and current, but we do not
+              guarantee that all descriptions, images, technical references,
+              availability details, or service information are complete,
+              current, or suitable for every situation.
+            </p>
+
+            <div class="notice-box">
+
+              <strong>
+                Important technical notice
+              </strong>
+
+              <p>
+                Website content is not a substitute for an equipment
+                inspection, manufacturer documentation, clinical engineering
+                assessment, authorised service procedure, or professional
+                technical judgement.
+              </p>
+
+            </div>
+
+          </section>
+
+          <section
+            id="enquiries"
+            class="terms-block"
+          >
+
+            <h2>
+              4. Website Enquiries
+            </h2>
+
+            <p>
+              Submitting a contact form, email, telephone message, or WhatsApp
+              enquiry does not:
+            </p>
+
+            <ul>
+              <li>Create a binding service contract.</li>
+              <li>Confirm engineer availability.</li>
+              <li>Guarantee a response time.</li>
+              <li>Confirm pricing or spare-parts availability.</li>
+              <li>Confirm that equipment is safe to use.</li>
+              <li>Replace emergency procedures or manufacturer guidance.</li>
+            </ul>
+
+            <p>
+              A service engagement begins only when the relevant scope,
+              commercial terms, and authorisation are confirmed in writing.
+            </p>
+
+          </section>
+
+          <section
+            id="quotations"
+            class="terms-block"
+          >
+
+            <h2>
+              5. Quotations and Proposals
+            </h2>
+
+            <p>
+              Quotations and proposals may be subject to:
+            </p>
+
+            <ul>
+              <li>Site inspection and equipment assessment.</li>
+              <li>Verification of model and serial number.</li>
+              <li>Availability and pricing of spare parts.</li>
+              <li>Manufacturer or distributor confirmation.</li>
+              <li>Travel, access, permit, and logistics requirements.</li>
+              <li>Taxes, duties, and third-party charges.</li>
+              <li>A stated validity period.</li>
+            </ul>
+
+            <p>
+              Unless stated otherwise in writing, prices may change if the
+              service scope, equipment condition, customer instructions,
+              access requirements, or parts requirements change.
+            </p>
+
+          </section>
+
+          <section
+            id="services"
+            class="terms-block"
+          >
+
+            <h2>
+              6. Biomedical Engineering Services
+            </h2>
+
+            <p>
+              Services may include inspection, diagnosis, repair, preventive
+              maintenance, calibration coordination, electrical safety
+              testing, installation, commissioning, decommissioning,
+              verification, documentation, and technical support.
+            </p>
+
+            <p>
+              The exact scope will be defined in the applicable quotation,
+              work order, maintenance agreement, service report, purchase
+              order, or contract.
+            </p>
+
+            <h3>
+              Service limitations
+            </h3>
+
+            <p>
+              A technician may suspend or decline work where:
+            </p>
+
+            <ul>
+              <li>The equipment presents an immediate safety risk.</li>
+              <li>Required documentation or access is unavailable.</li>
+              <li>The equipment has unauthorised modifications.</li>
+              <li>Required parts or tools are unavailable.</li>
+              <li>The requested work exceeds the authorised scope.</li>
+              <li>Manufacturer restrictions prevent the requested service.</li>
+              <li>The work environment is unsafe or unsuitable.</li>
+            </ul>
+
+          </section>
+
+          <section
+            id="customer-responsibilities"
+            class="terms-block"
+          >
+
+            <h2>
+              7. Customer Responsibilities
+            </h2>
+
+            <p>
+              Customers and facility representatives are responsible for:
+            </p>
+
+            <ul>
+              <li>Providing accurate equipment and fault information.</li>
+              <li>Providing safe and timely site access.</li>
+              <li>Authorising the service scope and responsible contacts.</li>
+              <li>Making equipment available at the agreed time.</li>
+              <li>Following applicable infection-control procedures.</li>
+              <li>Backing up data where relevant.</li>
+              <li>Removing patients and clinical dependencies before service.</li>
+              <li>Providing manuals, passwords, keys, and accessories where authorised.</li>
+              <li>Reviewing and signing service documentation.</li>
+              <li>Following post-service instructions and restrictions.</li>
+            </ul>
+
+            <p>
+              Customers must not use equipment that has been identified as
+              unsafe, out of service, or pending corrective action.
+            </p>
+
+          </section>
+
+          <section
+            id="parts"
+            class="terms-block"
+          >
+
+            <h2>
+              8. Spare Parts and Materials
+            </h2>
+
+            <p>
+              Replacement parts may be original equipment manufacturer parts,
+              authorised parts, compatible parts, refurbished parts, or other
+              approved alternatives, depending on availability and customer
+              approval.
+            </p>
+
+            <p>
+              Parts availability, lead times, compatibility, import
+              requirements, and manufacturer support may affect service timing
+              and final cost.
+            </p>
+
+            <p>
+              Removed parts may be returned, retained, or disposed of according
+              to the applicable quotation, warranty condition, manufacturer
+              requirement, customer instruction, or legal obligation.
+            </p>
+
+          </section>
+
+          <section
+            id="payment"
+            class="terms-block"
+          >
+
+            <h2>
+              9. Payment Terms
+            </h2>
+
+            <p>
+              Payment terms will be stated in the relevant quotation,
+              invoice, purchase order, contract, or maintenance agreement.
+            </p>
+
+            <p>
+              ICON BIOTRONICS may require:
+            </p>
+
+            <ul>
+              <li>Advance payment.</li>
+              <li>A deposit before ordering parts.</li>
+              <li>Payment before release of equipment.</li>
+              <li>Payment according to agreed credit terms.</li>
+              <li>Reimbursement of approved third-party costs.</li>
+            </ul>
+
+            <p>
+              Overdue amounts may result in service suspension, delayed
+              delivery, withholding of reports where lawful, or additional
+              recovery costs.
+            </p>
+
+          </section>
+
+          <section
+            id="warranties"
+            class="terms-block"
+          >
+
+            <h2>
+              10. Warranties
+            </h2>
+
+            <p>
+              Any service or parts warranty will be limited to the warranty
+              expressly stated in writing in the applicable quotation,
+              invoice, service report, or contract.
+            </p>
+
+            <p>
+              A warranty may not apply where a fault results from:
+            </p>
+
+            <ul>
+              <li>Misuse, impact, liquid damage, or improper storage.</li>
+              <li>Power fluctuations or unsuitable utilities.</li>
+              <li>Normal wear and consumable components.</li>
+              <li>Unauthorised repair, modification, or software changes.</li>
+              <li>Failure to follow manufacturer instructions.</li>
+              <li>Use outside stated operating conditions.</li>
+              <li>Unrelated faults or hidden pre-existing defects.</li>
+              <li>Third-party accessories, parts, or infrastructure.</li>
+            </ul>
+
+          </section>
+
+          <section
+            id="liability"
+            class="terms-block"
+          >
+
+            <h2>
+              11. Limitation of Liability
+            </h2>
+
+            <p>
+              To the maximum extent permitted by applicable law, ICON
+              BIOTRONICS will not be liable for indirect, incidental, special,
+              punitive, or consequential loss arising from website use,
+              delayed service, equipment downtime, lost revenue, lost data,
+              interrupted operations, or third-party products or services.
+            </p>
+
+            <p>
+              Any liability relating to a paid service will be subject to the
+              specific contract, quotation, warranty, and applicable law.
+            </p>
+
+            <p>
+              Nothing in these terms excludes liability that cannot lawfully
+              be excluded.
+            </p>
+
+          </section>
+
+          <section
+            id="intellectual-property"
+            class="terms-block"
+          >
+
+            <h2>
+              12. Intellectual Property
+            </h2>
+
+            <p>
+              Unless otherwise stated, website content, branding, layouts,
+              text, graphics, service descriptions, documents, and original
+              materials are owned by or licensed to ICON BIOTRONICS.
+            </p>
+
+            <p>
+              You may view and print reasonable portions for legitimate
+              internal business use. You may not reproduce, publish, modify,
+              sell, distribute, or commercially exploit website content
+              without written permission.
+            </p>
+
+            <p>
+              Third-party trademarks, product names, images, and technical
+              references remain the property of their respective owners.
+            </p>
+
+          </section>
+
+          <section
+            id="third-party"
+            class="terms-block"
+          >
+
+            <h2>
+              13. Third-Party Links and Services
+            </h2>
+
+            <p>
+              This website may link to or embed third-party services such as
+              Google Maps, WhatsApp, social platforms, manufacturers,
+              suppliers, hosted fonts, or image providers.
+            </p>
+
+            <p>
+              ICON BIOTRONICS does not control and is not responsible for
+              third-party websites, availability, content, security, privacy,
+              or terms.
+            </p>
+
+          </section>
+
+          <section
+            id="privacy"
+            class="terms-block"
+          >
+
+            <h2>
+              14. Privacy
+            </h2>
+
+            <p>
+              Personal information submitted through the website is handled
+              according to the
+              <a href="privacy.html">
+                ICON BIOTRONICS Privacy Policy
+              </a>.
+            </p>
+
+            <p>
+              Users should avoid submitting patient-identifiable information,
+              confidential clinical records, passwords, or unnecessary
+              sensitive data through the general website contact form.
+            </p>
+
+          </section>
+
+          <section
+            id="law"
+            class="terms-block"
+          >
+
+            <h2>
+              15. Governing Law and Disputes
+            </h2>
+
+            <p>
+              These website terms are governed by the applicable laws of the
+              United Arab Emirates and, where relevant, the laws and courts
+              having jurisdiction in Dubai.
+            </p>
+
+            <p>
+              Parties should first attempt to resolve disputes through
+              good-faith discussion. Specific service contracts may include
+              separate dispute-resolution provisions.
+            </p>
+
+          </section>
+
+          <section
+            id="changes"
+            class="terms-block"
+          >
+
+            <h2>
+              16. Changes to These Terms
+            </h2>
+
+            <p>
+              ICON BIOTRONICS may update these terms to reflect changes in
+              website features, services, business operations, or legal
+              requirements.
+            </p>
+
+            <p>
+              Revised terms will be published on this page with an updated
+              effective or last-updated date. Continued website use after an
+              update constitutes acceptance of the revised terms.
+            </p>
+
+          </section>
+
+          <section
+            id="contact"
+            class="terms-block"
+          >
+
+            <h2>
+              17. Contact Information
+            </h2>
+
+            <p>
+              For questions about these terms or about ICON BIOTRONICS
+              services, contact:
+            </p>
+
+            <div class="contact-box">
+
+              <h3>
+                ICON BIOTRONICS
+              </h3>
+
+              <p>
+                Dubai, United Arab Emirates
+              </p>
+
+              <p>
+                Email:
+                <a href="mailto:iconbiotronics.uae@gmail.com">
+                  iconbiotronics.uae@gmail.com
+                </a>
+              </p>
+
+              <p>
+                Telephone:
+                <a href="tel:+971553252589">
+                  +971 55 325 2589
+                </a>
+              </p>
+
+              <p>
+                Website:
+                <a href="https://iconbiotronics.com">
+                  https://iconbiotronics.com
+                </a>
+              </p>
+
+            </div>
+
+          </section>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <section
+    class="subscribe"
+    aria-label="Subscribe example"
+  >
+
+    <div class="container">
+
+      <article>
+
+        <hgroup>
+
+          <h2>
+            Need Service Information?
+          </h2>
+
+          <h3>
+            Contact ICON BIOTRONICS for quotations, service scopes,
+            maintenance agreements, and technical support.
+          </h3>
+
+        </hgroup>
+
+        <form
+          class="grid"
+          id="termsContactForm"
+        >
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Your name"
+            aria-label="Your name"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Business email"
+            aria-label="Business email"
+            required
+          >
+
+          <button type="submit">
+            Contact Us
+          </button>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <footer class="container">
+
+    <small>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+
+      •
+
+      <a href="terms.html">
+        Terms of Service
+      </a>
+
+    </small>
+
+  </footer>
+
+  <div class="floating-actions">
+
+    <a
+      class="call-float"
+      href="tel:+971553252589"
+      aria-label="Call ICON BIOTRONICS"
+    >
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/971553252589"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp ICON BIOTRONICS"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Service",
+    "url": "https://iconbiotronics.com/terms.html",
+    "description": "Terms governing use of the ICON BIOTRONICS website and biomedical engineering service enquiries.",
+    "dateModified": "2026-07-24",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ICON BIOTRONICS",
+      "url": "https://iconbiotronics.com"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "ICON BIOTRONICS",
+      "url": "https://iconbiotronics.com",
+      "telephone": "+971553252589",
+      "email": "iconbiotronics.uae@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+
+  <script>
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("menuButton");
+
+      const navigation = document.querySelector(
+        ".desktop-navigation"
+      );
+
+      const termsContactForm = document.getElementById(
+        "termsContactForm"
+      );
+
+      if (menuButton && navigation) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = navigation.classList.toggle("active");
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+          document.body.classList.toggle(
+            "menu-open",
+            isOpen
+          );
+
+          menuButton.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navigation.classList.remove("active");
+
+            document.body.classList.remove("menu-open");
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuButton.innerHTML =
+              '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      termsContactForm?.addEventListener(
+        "submit",
+        (event) => {
+          event.preventDefault();
+
+          if (!termsContactForm.checkValidity()) {
+            termsContactForm.reportValidity();
+            return;
+          }
+
+          const name = document.getElementById(
+            "firstname"
+          ).value.trim();
+
+          const email = document.getElementById(
+            "email"
+          ).value.trim();
+
+          const subject = encodeURIComponent(
+            "Terms or service enquiry from " + name
+          );
+
+          const body = encodeURIComponent(
+            "Name: " +
+            name +
+            "\nEmail: " +
+            email +
+            "\n\nPlease describe your enquiry:"
+          );
+
+          window.location.href =
+            "mailto:iconbiotronics.uae@gmail.com" +
+            "?subject=" +
+            subject +
+            "&body=" +
+            body;
+        }
+      );
+    });
+  </script>
+
+</body>
+</html>
