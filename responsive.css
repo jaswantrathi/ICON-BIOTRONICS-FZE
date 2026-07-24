@@ -1,0 +1,274 @@
+/* =========================================================
+   ICON BIOTRONICS — RESPONSIVE FIXES
+   File: css/responsive.css
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(100% - 40px, 1120px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 0.82fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-right {
+    min-height: 480px;
+  }
+
+  .hero-right img {
+    max-height: 480px;
+  }
+
+  .trust-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  header nav {
+    z-index: 999;
+  }
+
+  header nav.open {
+    overflow-y: auto;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-left {
+    margin-inline: auto;
+  }
+
+  .hero p {
+    margin-inline: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .hero-right {
+    order: initial;
+    min-height: 390px;
+  }
+
+  .hero-right img {
+    max-height: 390px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 46px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  .container {
+    width: min(100% - 30px, 720px);
+  }
+
+  .section-title h2 {
+    font-size: clamp(1.9rem, 7vw, 2.8rem);
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 10vw, 3.8rem);
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-card,
+  .service-card img {
+    min-height: 400px;
+  }
+
+  .equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .emergency-grid {
+    gap: 38px;
+  }
+
+  .emergency h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}
+
+@media (max-width: 640px) {
+  header .container {
+    min-height: 70px;
+  }
+
+  header nav {
+    inset: 70px 0 auto;
+  }
+
+  .logo img {
+    max-width: 175px;
+  }
+
+  .hero-right {
+    min-height: 310px;
+  }
+
+  .hero-right img {
+    max-height: 310px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .hero-stats > div {
+    padding: 0 0 16px;
+  }
+
+  .trust-grid,
+  .why-grid,
+  .process-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-content {
+    padding: 25px;
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .emergency-list {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, 440px);
+  }
+
+  .hero {
+    padding: 56px 0 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 12vw, 3.2rem);
+  }
+
+  .hero-right {
+    min-height: 270px;
+  }
+
+  .hero-right img {
+    max-height: 270px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .trust,
+  .services,
+  .why-us,
+  .equipment,
+  .process,
+  .testimonials,
+  .emergency {
+    padding: 70px 0;
+  }
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .service-card img {
+    min-height: 365px;
+  }
+
+  .service-content p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .floating-call,
+  .floating-whatsapp {
+    right: 12px;
+  }
+
+  .floating-call {
+    bottom: 78px;
+  }
+
+  .floating-whatsapp {
+    bottom: 14px;
+  }
+}
