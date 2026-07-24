@@ -1,6 +1,6 @@
 /* =========================================================
-   ICON BIOTRONICS — MAIN JAVASCRIPT
-   File: js/script.js
+   ICON BIOTRONICS — MAIN JAVASCRIPIT
+   File: js/scripit.js
    ========================================================= */
 
 "use strict";
