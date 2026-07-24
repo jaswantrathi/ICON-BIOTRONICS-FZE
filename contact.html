@@ -1278,6 +1278,21 @@
                 ></textarea>
               </label>
 
+              <div
+  class="website-field"
+  aria-hidden="true"
+>
+  <label>
+    Website
+
+    <input
+      type="text"
+      name="website"
+      tabindex="-1"
+      autocomplete="off"
+    >
+  </label>
+</div>
               <label class="field-full">
 
                 <input
@@ -1850,3 +1865,494 @@
 
 </body>
 </html>
+<?php
+
+declare(strict_types=1);
+
+/*
+|--------------------------------------------------------------------------
+| ICON BIOTRONICS Contact Form Handler
+|--------------------------------------------------------------------------
+| Receives the contact form from contact.html and emails the enquiry.
+|
+| Before deployment:
+| 1. Replace the recipient email if required.
+| 2. Replace noreply@iconbiotronics.com with a real domain email.
+| 3. Confirm PHP mail() is enabled on your hosting account.
+|--------------------------------------------------------------------------
+*/
+
+session_start();
+
+const RECIPIENT_EMAIL = 'iconbiotronics.uae@gmail.com';
+const RECIPIENT_NAME  = 'ICON BIOTRONICS';
+const WEBSITE_DOMAIN  = 'iconbiotronics.com';
+const SUCCESS_PAGE    = 'success.html';
+const ERROR_PAGE      = 'error.html';
+
+/*
+|--------------------------------------------------------------------------
+| Security Headers
+|--------------------------------------------------------------------------
+*/
+
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: SAMEORIGIN');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+
+/*
+|--------------------------------------------------------------------------
+| Only Accept POST Requests
+|--------------------------------------------------------------------------
+*/
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    redirectWithStatus(ERROR_PAGE, 'invalid_request');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Basic Same-Origin Check
+|--------------------------------------------------------------------------
+*/
+
+if (!isAllowedOrigin()) {
+    redirectWithStatus(ERROR_PAGE, 'invalid_origin');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Rate Limiting
+|--------------------------------------------------------------------------
+| Prevent repeated submissions within 20 seconds.
+|--------------------------------------------------------------------------
+*/
+
+$currentTime = time();
+
+if (
+    isset($_SESSION['last_form_submission']) &&
+    ($currentTime - (int) $_SESSION['last_form_submission']) < 20
+) {
+    redirectWithStatus(ERROR_PAGE, 'rate_limit');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Honeypot Spam Check
+|--------------------------------------------------------------------------
+| Add this hidden field to contact.html:
+|
+| <div class="website-field" aria-hidden="true">
+|   <label>
+|     Website
+|     <input
+|       type="text"
+|       name="website"
+|       tabindex="-1"
+|       autocomplete="off"
+|     >
+|   </label>
+| </div>
+|--------------------------------------------------------------------------
+*/
+
+$honeypot = trim((string) ($_POST['website'] ?? ''));
+
+if ($honeypot !== '') {
+    /*
+     * Return a success page to avoid revealing the spam check.
+     */
+    redirectWithStatus(SUCCESS_PAGE, 'submitted');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Collect and Sanitize Input
+|--------------------------------------------------------------------------
+*/
+
+$name = sanitizeSingleLine($_POST['name'] ?? '');
+$company = sanitizeSingleLine($_POST['company'] ?? '');
+$email = sanitizeEmail($_POST['email'] ?? '');
+$phone = sanitizePhone($_POST['phone'] ?? '');
+$service = sanitizeSingleLine($_POST['service'] ?? '');
+$equipment = sanitizeSingleLine($_POST['equipment'] ?? '');
+$message = sanitizeMessage($_POST['message'] ?? '');
+$consent = isset($_POST['consent']);
+
+/*
+|--------------------------------------------------------------------------
+| Validation
+|--------------------------------------------------------------------------
+*/
+
+$errors = [];
+
+if ($name === '' || mb_strlen($name) < 2 || mb_strlen($name) > 100) {
+    $errors[] = 'Invalid name';
+}
+
+if (
+    $company !== '' &&
+    mb_strlen($company) > 150
+) {
+    $errors[] = 'Invalid company';
+}
+
+if (
+    $email === '' ||
+    !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+    mb_strlen($email) > 190
+) {
+    $errors[] = 'Invalid email';
+}
+
+if (
+    $phone === '' ||
+    mb_strlen($phone) < 7 ||
+    mb_strlen($phone) > 30
+) {
+    $errors[] = 'Invalid phone';
+}
+
+$allowedServices = [
+    'Medical equipment repair',
+    'Preventive maintenance',
+    'Calibration and testing',
+    'Installation and commissioning',
+    'Electrical safety testing',
+    'Equipment inspection',
+    'Annual maintenance contract',
+    'Other technical support',
+];
+
+if (
+    $service === '' ||
+    !in_array($service, $allowedServices, true)
+) {
+    $errors[] = 'Invalid service';
+}
+
+$allowedEquipment = [
+    '',
+    'Diagnostic imaging',
+    'Critical care',
+    'Patient monitoring',
+    'Laboratory equipment',
+    'Dental equipment',
+    'Sterilization equipment',
+    'Other medical equipment',
+];
+
+if (!in_array($equipment, $allowedEquipment, true)) {
+    $errors[] = 'Invalid equipment category';
+}
+
+if (
+    $message === '' ||
+    mb_strlen($message) < 10 ||
+    mb_strlen($message) > 5000
+) {
+    $errors[] = 'Invalid message';
+}
+
+if (!$consent) {
+    $errors[] = 'Consent required';
+}
+
+if ($errors !== []) {
+    error_log(
+        'ICON BIOTRONICS form validation failed: ' .
+        implode(', ', $errors)
+    );
+
+    redirectWithStatus(ERROR_PAGE, 'validation');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Prepare Email
+|--------------------------------------------------------------------------
+*/
+
+$submissionDate = date('Y-m-d H:i:s');
+$visitorIp = getVisitorIp();
+$userAgent = sanitizeSingleLine($_SERVER['HTTP_USER_AGENT'] ?? 'Unknown');
+
+$subject = sprintf(
+    'New website enquiry: %s - %s',
+    $service,
+    $name
+);
+
+$emailBody = buildEmailBody(
+    name: $name,
+    company: $company,
+    email: $email,
+    phone: $phone,
+    service: $service,
+    equipment: $equipment,
+    message: $message,
+    submissionDate: $submissionDate,
+    visitorIp: $visitorIp,
+    userAgent: $userAgent
+);
+
+/*
+|--------------------------------------------------------------------------
+| Email Headers
+|--------------------------------------------------------------------------
+| The From address should use your own domain.
+| Do not use the visitor's email as the From address.
+|--------------------------------------------------------------------------
+*/
+
+$fromEmail = 'noreply@' . WEBSITE_DOMAIN;
+
+$headers = [
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=UTF-8',
+    'From: ' . RECIPIENT_NAME . ' Website <' . $fromEmail . '>',
+    'Reply-To: ' . formatReplyTo($name, $email),
+    'X-Mailer: PHP/' . phpversion(),
+];
+
+$headerString = implode("\r\n", $headers);
+
+/*
+|--------------------------------------------------------------------------
+| Send Email
+|--------------------------------------------------------------------------
+*/
+
+$mailSent = mail(
+    RECIPIENT_EMAIL,
+    encodeSubject($subject),
+    $emailBody,
+    $headerString
+);
+
+if (!$mailSent) {
+    error_log(
+        sprintf(
+            'ICON BIOTRONICS contact email failed for %s at %s',
+            $email,
+            $submissionDate
+        )
+    );
+
+    redirectWithStatus(ERROR_PAGE, 'mail_failed');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Successful Submission
+|--------------------------------------------------------------------------
+*/
+
+$_SESSION['last_form_submission'] = $currentTime;
+
+redirectWithStatus(SUCCESS_PAGE, 'submitted');
+
+/*
+|--------------------------------------------------------------------------
+| Helper Functions
+|--------------------------------------------------------------------------
+*/
+
+function sanitizeSingleLine(mixed $value): string
+{
+    $value = is_string($value) ? $value : '';
+
+    $value = strip_tags($value);
+    $value = str_replace(["\r", "\n", "\0"], ' ', $value);
+    $value = preg_replace('/\s+/', ' ', $value) ?? '';
+
+    return trim($value);
+}
+
+function sanitizeEmail(mixed $value): string
+{
+    $value = is_string($value) ? $value : '';
+
+    $value = str_replace(["\r", "\n", "\0"], '', $value);
+
+    return trim(
+        filter_var($value, FILTER_SANITIZE_EMAIL) ?: ''
+    );
+}
+
+function sanitizePhone(mixed $value): string
+{
+    $value = is_string($value) ? $value : '';
+
+    $value = preg_replace(
+        '/[^0-9+\-\s().]/',
+        '',
+        $value
+    ) ?? '';
+
+    return trim($value);
+}
+
+function sanitizeMessage(mixed $value): string
+{
+    $value = is_string($value) ? $value : '';
+
+    $value = strip_tags($value);
+    $value = str_replace("\0", '', $value);
+    $value = preg_replace("/\r\n|\r|\n/", "\n", $value) ?? '';
+    $value = preg_replace('/[ \t]+/', ' ', $value) ?? '';
+
+    return trim($value);
+}
+
+function formatReplyTo(string $name, string $email): string
+{
+    $safeName = str_replace(
+        ['"', "\r", "\n"],
+        '',
+        $name
+    );
+
+    return sprintf(
+        '"%s" <%s>',
+        $safeName,
+        $email
+    );
+}
+
+function encodeSubject(string $subject): string
+{
+    if (function_exists('mb_encode_mimeheader')) {
+        return mb_encode_mimeheader(
+            $subject,
+            'UTF-8',
+            'B',
+            "\r\n"
+        );
+    }
+
+    return $subject;
+}
+
+function buildEmailBody(
+    string $name,
+    string $company,
+    string $email,
+    string $phone,
+    string $service,
+    string $equipment,
+    string $message,
+    string $submissionDate,
+    string $visitorIp,
+    string $userAgent
+): string {
+    $companyValue = $company !== ''
+        ? $company
+        : 'Not provided';
+
+    $equipmentValue = $equipment !== ''
+        ? $equipment
+        : 'Not selected';
+
+    return implode("\n", [
+        'NEW WEBSITE ENQUIRY',
+        '===================',
+        '',
+        'Contact details',
+        '---------------',
+        'Name: ' . $name,
+        'Company / Facility: ' . $companyValue,
+        'Email: ' . $email,
+        'Phone: ' . $phone,
+        '',
+        'Service details',
+        '---------------',
+        'Service required: ' . $service,
+        'Equipment category: ' . $equipmentValue,
+        '',
+        'Equipment / Issue Details',
+        '-------------------------',
+        $message,
+        '',
+        'Submission information',
+        '----------------------',
+        'Submitted: ' . $submissionDate,
+        'IP address: ' . $visitorIp,
+        'Browser: ' . $userAgent,
+        '',
+        'This message was submitted through iconbiotronics.com.',
+    ]);
+}
+
+function getVisitorIp(): string
+{
+    /*
+     * REMOTE_ADDR is safer than trusting forwarded headers by default.
+     * Configure trusted proxy handling separately if using Cloudflare
+     * or another reverse proxy.
+     */
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
+
+    if (
+        $ip !== 'Unknown' &&
+        filter_var($ip, FILTER_VALIDATE_IP)
+    ) {
+        return $ip;
+    }
+
+    return 'Unknown';
+}
+
+function isAllowedOrigin(): bool
+{
+    $allowedHosts = [
+        'iconbiotronics.com',
+        'www.iconbiotronics.com',
+        'localhost',
+        '127.0.0.1',
+    ];
+
+    $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+    $referer = $_SERVER['HTTP_REFERER'] ?? '';
+
+    /*
+     * Some browsers or privacy tools omit both headers.
+     * The form can still be accepted when both are absent.
+     */
+
+    if ($origin === '' && $referer === '') {
+        return true;
+    }
+
+    $source = $origin !== '' ? $origin : $referer;
+    $host = parse_url($source, PHP_URL_HOST);
+
+    if (!is_string($host)) {
+        return false;
+    }
+
+    return in_array(
+        strtolower($host),
+        $allowedHosts,
+        true
+    );
+}
+
+function redirectWithStatus(
+    string $page,
+    string $status
+): never {
+    $safeStatus = rawurlencode($status);
+
+    header(
+        'Location: ' . $page . '?status=' . $safeStatus,
+        true,
+        303
+    );
+
+    exit;
+}
