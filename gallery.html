@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Medical Equipment Service Gallery UAE | ICON BIOTRONICS</title>
+
+  <meta
+    name="description"
+    content="View ICON BIOTRONICS biomedical engineering projects, medical equipment maintenance, repair, calibration, installation and technical service work completed across the UAE."
+  >
+
+  <meta
+    name="keywords"
+    content="Biomedical Engineering Gallery UAE, Medical Equipment Repair Gallery, MRI Maintenance UAE, Ventilator Repair Dubai, Dental Equipment Service, ICON BIOTRONICS Projects"
+  >
+
+  <meta name="author" content="ICON BIOTRONICS">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://iconbiotronics.com/gallery.html">
+
+  <meta property="og:title" content="ICON BIOTRONICS Service Gallery">
+  <meta
+    property="og:description"
+    content="Explore biomedical engineering, medical equipment maintenance, calibration and installation projects across the UAE."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iconbiotronics.com/gallery.html">
+  <meta
+    property="og:image"
+    content="https://iconbiotronics.com/images/gallery/gallery-og.jpg"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICON BIOTRONICS Service Gallery">
+  <meta
+    name="twitter:description"
+    content="Medical equipment service, calibration, maintenance and installation projects across the UAE."
+  >
+  <meta
+    name="twitter:image"
+    content="https://iconbiotronics.com/images/gallery/gallery-og.jpg"
+  >
+
+  <link rel="icon" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+
+  <style>
+    /* =========================================================
+       GALLERY PAGE
+       ========================================================= */
+
+    .gallery-page {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .gallery-hero {
+      position: relative;
+      min-height: 510px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 110px 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 18, 33, 0.96),
+          rgba(5, 18, 33, 0.64)
+        ),
+        url("images/gallery/gallery-hero.jpg") center / cover no-repeat;
+    }
+
+    .gallery-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 1px
+        );
+      background-size: 52px 52px;
+    }
+
+    .gallery-hero::after {
+      content: "";
+      position: absolute;
+      top: -180px;
+      right: -140px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: rgba(0, 174, 239, 0.13);
+      filter: blur(18px);
+    }
+
+    .gallery-hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .gallery-hero-content .section-tag {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--accent-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .gallery-hero-content h1 {
+      max-width: 880px;
+      margin-bottom: 22px;
+      color: var(--white);
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .gallery-hero-content > p {
+      max-width: 760px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .gallery-hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .gallery-hero-stat {
+      min-width: 155px;
+      padding: 18px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(14px);
+    }
+
+    .gallery-hero-stat strong,
+    .gallery-hero-stat span {
+      display: block;
+    }
+
+    .gallery-hero-stat strong {
+      margin-bottom: 5px;
+      color: var(--accent-light);
+      font-size: 1.55rem;
+    }
+
+    .gallery-hero-stat span {
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.72rem;
+    }
+
+    .gallery-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.8rem;
+    }
+
+    .gallery-breadcrumb a {
+      color: var(--accent-light);
+    }
+
+    .gallery-introduction,
+    .project-gallery,
+    .gallery-process,
+    .gallery-trust,
+    .gallery-faq {
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .gallery-introduction {
+      padding: 110px 0 80px;
+    }
+
+    .gallery-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .gallery-intro-copy .section-tag,
+    .gallery-trust-copy .section-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .gallery-intro-copy h2,
+    .gallery-trust-copy h2 {
+      margin-bottom: 20px;
+      color: var(--text-dark);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.17;
+      letter-spacing: -0.035em;
+    }
+
+    .gallery-intro-copy p,
+    .gallery-trust-copy > p {
+      color: var(--text-muted);
+    }
+
+    .gallery-intro-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 20px;
+      margin-top: 28px;
+    }
+
+    .gallery-intro-features div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-dark);
+      font-size: 0.87rem;
+      font-weight: 500;
+    }
+
+    .gallery-intro-features i {
+      color: var(--accent);
+    }
+
+    .gallery-intro-image {
+      position: relative;
+    }
+
+    .gallery-intro-image figure {
+      margin: 0;
+    }
+
+    .gallery-intro-image img {
+      width: 100%;
+      min-height: 540px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-intro-image figcaption {
+      margin-top: 10px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .gallery-intro-badge {
+      position: absolute;
+      left: -32px;
+      bottom: 48px;
+      width: 230px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 22px;
+      border: 5px solid var(--white);
+      border-radius: 20px;
+      background: var(--gradient-accent);
+      color: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-intro-badge i {
+      font-size: 1.8rem;
+    }
+
+    .gallery-intro-badge strong,
+    .gallery-intro-badge span {
+      display: block;
+    }
+
+    .gallery-intro-badge strong {
+      font-size: 1.25rem;
+    }
+
+    .gallery-intro-badge span {
+      font-size: 0.72rem;
+      line-height: 1.5;
+    }
+
+    .project-gallery {
+      padding: 90px 0 110px;
+    }
+
+    .gallery-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 42px 0 48px;
+    }
+
+    .gallery-filter {
+      min-height: 44px;
+      margin: 0;
+      padding: 10px 19px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--text);
+      box-shadow: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition:
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+    }
+
+    .gallery-filter:hover,
+    .gallery-filter.active {
+      border-color: var(--accent);
+      background: var(--gradient-accent);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-flow: dense;
+      gap: 22px;
+    }
+
+    .gallery-item {
+      position: relative;
+      grid-column: span 4;
+      min-height: 330px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--text-dark);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        opacity 0.35s ease;
+    }
+
+    .gallery-item.gallery-wide {
+      grid-column: span 8;
+    }
+
+    .gallery-item.gallery-tall {
+      min-height: 682px;
+      grid-row: span 2;
+    }
+
+    .gallery-item.gallery-hidden {
+      display: none;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-item figure {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+      filter: brightness(0.75);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px;
+      background:
+        linear-gradient(
+          180deg,
+          transparent 32%,
+          rgba(4, 17, 30, 0.9) 100%
+        );
+      color: var(--white);
+    }
+
+    .gallery-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(0, 174, 239, 0.1),
+          transparent 55%
+        );
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay::before {
+      opacity: 1;
+    }
+
+    .gallery-category {
+      position: relative;
+      z-index: 2;
+      width: max-content;
+      margin-bottom: 9px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0, 174, 239, 0.92);
+      color: var(--white);
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .gallery-overlay h3 {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 7px;
+      color: var(--white);
+      font-size: 1.08rem;
+    }
+
+    .gallery-overlay p {
+      position: relative;
+      z-index: 2;
+      max-height: 0;
+      margin: 0;
+      overflow: hidden;
+      color: rgba(255, 255, 255, 0.69);
+      font-size: 0.78rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(8px);
+      transition:
+        max-height 0.4s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay p {
+      max-height: 100px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-view-icon {
+      position: absolute;
+      z-index: 3;
+      top: 20px;
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background: rgba(5, 18, 33, 0.54);
+      color: var(--white);
+      opacity: 0;
+      transform: scale(0.8);
+      backdrop-filter: blur(12px);
+      transition:
+        opacity var(--transition),
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .gallery-item:hover .gallery-view-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-view-icon:hover {
+      background: var(--accent);
+    }
+
+    .gallery-load-more {
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+    }
+
+    .gallery-load-more button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: auto;
+      margin: 0;
+      padding: 14px 25px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--gradient-dark);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .gallery-process {
+      padding: 110px 0;
+    }
+
+    .gallery-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .gallery-process-grid article {
+      position: relative;
+      padding: 32px 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-process-grid article > span {
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      color: rgba(0, 174, 239, 0.09);
+      font-size: 3.2rem;
+      font-weight: 800;
+    }
+
+    .gallery-process-grid i {
+      width: 56px;
+      height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border-radius: 17px;
+      background: var(--gradient-accent);
+      color: var(--white);
+      font-size: 1.24rem;
+    }
+
+    .gallery-process-grid h3 {
+      margin-bottom: 8px;
+      color: var(--text-dark);
+      font-size: 1.04rem;
+    }
+
+    .gallery-process-grid p {
+      margin-bottom: 0;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    .gallery-trust {
+      padding: 110px 0;
+    }
+
+    .gallery-trust-grid {
+      display: grid;
+      grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .gallery-trust-image {
+      position: relative;
+    }
+
+    .gallery-trust-image img {
+      width: 100%;
+      min-height: 620px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-trust-list {
+      display: grid;
+      gap: 18px;
+      margin: 30px 0;
+    }
+
+    .gallery-trust-list article {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--off-white);
+    }
+
+    .gallery-trust-list i {
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: var(--gradient-accent);
+      color: var(--white);
+    }
+
+    .gallery-trust-list h3 {
+      margin-bottom: 5px;
+      color: var(--text-dark);
+      font-size: 1rem;
+    }
+
+    .gallery-trust-list p {
+      margin-bottom: 0;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    .gallery-faq {
+      padding: 110px 0;
+    }
+
+    .gallery-faq-list {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .gallery-faq-list details {
+      margin-bottom: 14px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-faq-list summary {
+      padding: 22px 24px;
+      color: var(--text-dark);
+      font-size: 0.93rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .gallery-faq-list p {
+      padding: 0 24px 22px;
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.87rem;
+    }
+
+    .gallery-cta {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 30px auto 100px;
+      padding: 68px 40px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(5, 18, 33, 0.97),
+          rgba(5, 56, 83, 0.92)
+        ),
+        url("images/gallery/gallery-cta.jpg") center / cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-cta h2 {
+      max-width: 780px;
+      margin: 0 auto 16px;
+      color: var(--white);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .gallery-cta p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .gallery-cta .hero-buttons {
+      justify-content: center;
+    }
+
+    .gallery-enquiry-strip {
+      margin: 70px 0;
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--gradient-dark);
+      color: var(--white);
+    }
+
+    .gallery-enquiry-strip h2,
+    .gallery-enquiry-strip h3 {
+      color: var(--white);
+    }
+
+    .gallery-enquiry-strip h3 {
+      color: rgba(255, 255, 255, 0.64);
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-enquiry-strip input {
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .gallery-enquiry-strip button {
+      border: 0;
+      background: var(--gradient-accent);
+      color: var(--white);
+    }
+
+    /* LIGHTBOX */
+
+    .gallery-lightbox {
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: rgba(3, 12, 22, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .gallery-lightbox.active {
+      display: flex;
+      animation: fadeIn 0.3s ease both;
+    }
+
+    .gallery-lightbox-content {
+      position: relative;
+      width: min(1100px, 100%);
+      max-height: calc(100vh - 60px);
+    }
+
+    .gallery-lightbox-image {
+      width: 100%;
+      max-height: calc(100vh - 150px);
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-lightbox-caption {
+      padding: 18px 60px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .gallery-lightbox-caption strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--white);
+      font-size: 1rem;
+    }
+
+    .gallery-lightbox-caption span {
+      font-size: 0.78rem;
+    }
+
+    .gallery-lightbox-close,
+    .gallery-lightbox-prev,
+    .gallery-lightbox-next {
+      position: absolute;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 50%;
+      background: rgba(5, 18, 33, 0.68);
+      color: var(--white);
+      backdrop-filter: blur(12px);
+    }
+
+    .gallery-lightbox-close {
+      top: 16px;
+      right: 16px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .gallery-lightbox-prev,
+    .gallery-lightbox-next {
+      top: 50%;
+      width: 52px;
+      height: 52px;
+      transform: translateY(-50%);
+    }
+
+    .gallery-lightbox-prev {
+      left: 18px;
+    }
+
+    .gallery-lightbox-next {
+      right: 18px;
+    }
+
+    .gallery-lightbox-close:hover,
+    .gallery-lightbox-prev:hover,
+    .gallery-lightbox-next:hover {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 1050px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item,
+      .gallery-item.gallery-wide {
+        grid-column: auto;
+      }
+
+      .gallery-item.gallery-tall {
+        min-height: 520px;
+        grid-row: auto;
+      }
+
+      .gallery-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .gallery-intro-grid,
+      .gallery-trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-intro-image,
+      .gallery-trust-image {
+        max-width: 720px;
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .gallery-hero {
+        min-height: 440px;
+        padding: 80px 0;
+      }
+
+      .gallery-hero-content {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .gallery-introduction,
+      .project-gallery,
+      .gallery-process,
+      .gallery-trust,
+      .gallery-faq {
+        width: min(100% - 28px, var(--container));
+        padding: 78px 0;
+      }
+
+      .gallery-intro-features,
+      .gallery-grid,
+      .gallery-process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item.gallery-wide,
+      .gallery-item.gallery-tall {
+        min-height: 340px;
+      }
+
+      .gallery-intro-image img,
+      .gallery-trust-image img {
+        min-height: 440px;
+      }
+
+      .gallery-intro-badge {
+        left: 14px;
+        bottom: 38px;
+      }
+
+      .gallery-controls {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+
+      .gallery-filter {
+        flex: 0 0 auto;
+      }
+
+      .gallery-cta {
+        width: min(100% - 28px, var(--container));
+        padding: 48px 22px;
+      }
+
+      .gallery-lightbox {
+        padding: 14px;
+      }
+
+      .gallery-lightbox-prev,
+      .gallery-lightbox-next {
+        top: auto;
+        bottom: 72px;
+      }
+
+      .gallery-lightbox-prev {
+        left: 22px;
+      }
+
+      .gallery-lightbox-next {
+        right: 22px;
+      }
+
+      .gallery-enquiry-strip {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+971553252589">+971 55 325 2589</a>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:iconbiotronics.uae@gmail.com">
+          iconbiotronics.uae@gmail.com
+        </a>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-location-dot"></i>
+        Dubai, United Arab Emirates
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+
+  <nav class="container-fluid main-navigation">
+    <ul>
+      <li>
+        <strong>
+          <a href="index.html" class="logo" aria-label="ICON BIOTRONICS home">
+            <img src="images/logo.png" alt="ICON BIOTRONICS logo">
+          </a>
+        </strong>
+      </li>
+    </ul>
+
+    <ul class="desktop-navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html" role="button">Request Quote</a></li>
+    </ul>
+
+    <button
+      id="menu-btn"
+      class="mobile-menu-button"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <main class="container gallery-page">
+
+    <!-- HERO -->
+
+    <section class="gallery-hero">
+      <div class="gallery-hero-content">
+        <span class="section-tag">PROJECT GALLERY</span>
+
+        <h1>
+          Biomedical Engineering Expertise in Action
+        </h1>
+
+        <p>
+          Explore selected medical equipment maintenance, repair, calibration,
+          installation and inspection projects completed by ICON BIOTRONICS
+          for healthcare facilities across the UAE.
+        </p>
+
+        <div class="gallery-hero-stats">
+          <div class="gallery-hero-stat">
+            <strong>500+</strong>
+            <span>Service Projects</span>
+          </div>
+
+          <div class="gallery-hero-stat">
+            <strong>15+</strong>
+            <span>Years of Experience</span>
+          </div>
+
+          <div class="gallery-hero-stat">
+            <strong>24/7</strong>
+            <span>Emergency Support</span>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#project-gallery" class="primary-btn">
+            View Projects
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+
+          <a
+            href="https://wa.me/971553252589?text=Hello%20ICON%20BIOTRONICS,%20I%20would%20like%20to%20request%20medical%20equipment%20service."
+            class="secondary-btn"
+            target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            Request Service
+          </a>
+        </div>
+
+        <div class="gallery-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Gallery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="gallery-introduction">
+      <div class="gallery-intro-grid">
+
+        <div class="gallery-intro-copy">
+          <span class="section-tag">FIELD EXPERIENCE</span>
+
+          <h2>
+            Supporting Medical Equipment Throughout Its Lifecycle
+          </h2>
+
+          <p>
+            Our project gallery reflects the range of biomedical engineering
+            services delivered by ICON BIOTRONICS, from preventive maintenance
+            and breakdown repair to equipment installation, inspection,
+            calibration and performance verification.
+          </p>
+
+          <p>
+            Each assignment is approached with technical care, clear
+            communication and proper service documentation to support equipment
+            reliability and healthcare continuity.
+          </p>
+
+          <div class="gallery-intro-features">
+            <div>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Diagnostic imaging systems</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Critical care equipment</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Dental and sterilisation systems</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Calibration and safety testing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-intro-image">
+          <figure>
+            <img
+              src="images/gallery/biomedical-engineer-project.jpg"
+              alt="Biomedical engineer performing medical equipment service"
+              loading="lazy"
+            >
+
+            <figcaption>
+              Field engineering support for hospitals, clinics and diagnostic
+              facilities.
+            </figcaption>
+          </figure>
+
+          <div class="gallery-intro-badge">
+            <i class="fa-solid fa-camera-retro"></i>
+
+            <div>
+              <strong>Real Projects</strong>
+              <span>
+                Selected examples of our technical service capability.
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECT GALLERY -->
+
+    <section id="project-gallery" class="project-gallery">
+      <div class="section-title">
+        <span class="section-tag">OUR WORK</span>
+
+        <h2>
+          Medical Equipment Service Project Gallery
+        </h2>
+
+        <p>
+          Filter the gallery by equipment category and select any image to view
+          a larger version.
+        </p>
+      </div>
+
+      <div
+        class="gallery-controls"
+        role="group"
+        aria-label="Gallery categories"
+      >
+        <button
+          type="button"
+          class="gallery-filter active"
+          data-filter="all"
+        >
+          All Projects
+        </button>
+
+        <button
+          type="button"
+          class="gallery-filter"
+          data-filter="imaging"
+        >
+          Diagnostic Imaging
+        </button>
+
+        <button
+          type="button"
+          class="gallery-filter"
+          data-filter="critical-care"
+        >
+          Critical Care
+        </button>
+
+        <button
+          type="button"
+          class="gallery-filter"
+          data-filter="dental"
+        >
+          Dental
+        </button>
+
+        <button
+          type="button"
+          class="gallery-filter"
+          data-filter="calibration"
+        >
+          Calibration
+        </button>
+
+        <button
+          type="button"
+          class="gallery-filter"
+          data-filter="installation"
+        >
+          Installation
+        </button>
+      </div>
+
+      <div class="gallery-grid">
+
+        <article
+          class="gallery-item gallery-wide"
+          data-category="imaging"
+          tabindex="0"
+          role="button"
+          aria-label="View MRI system inspection project"
+        >
+          <figure>
+            <img
+              src="images/gallery/mri-system-inspection.jpg"
+              alt="Biomedical engineer inspecting an MRI system"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Diagnostic Imaging</span>
+            <h3>MRI System Inspection and Maintenance</h3>
+            <p>
+              Technical inspection, system checks and preventive maintenance
+              for an advanced MRI installation.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="critical-care"
+          tabindex="0"
+          role="button"
+          aria-label="View ventilator performance testing project"
+        >
+          <figure>
+            <img
+              src="images/gallery/ventilator-testing.jpg"
+              alt="Biomedical engineer testing a medical ventilator"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Critical Care</span>
+            <h3>Ventilator Performance Testing</h3>
+            <p>
+              Flow, pressure, alarm and oxygen concentration verification.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item gallery-tall"
+          data-category="dental"
+          tabindex="0"
+          role="button"
+          aria-label="View dental chair repair project"
+        >
+          <figure>
+            <img
+              src="images/gallery/dental-chair-service.jpg"
+              alt="Dental chair maintenance and repair"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dental Equipment</span>
+            <h3>Dental Chair Repair and Service</h3>
+            <p>
+              Inspection of chair movement, controls, water systems, suction
+              and treatment-unit accessories.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="calibration"
+          tabindex="0"
+          role="button"
+          aria-label="View patient monitor calibration project"
+        >
+          <figure>
+            <img
+              src="images/gallery/patient-monitor-calibration.jpg"
+              alt="Patient monitor calibration using biomedical test equipment"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Calibration</span>
+            <h3>Patient Monitor Calibration</h3>
+            <p>
+              Verification of ECG, SpO2, NIBP and temperature measurement
+              performance.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="imaging"
+          tabindex="0"
+          role="button"
+          aria-label="View CT scanner service project"
+        >
+          <figure>
+            <img
+              src="images/gallery/ct-scanner-service.jpg"
+              alt="CT scanner preventive maintenance service"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Diagnostic Imaging</span>
+            <h3>CT Scanner Preventive Maintenance</h3>
+            <p>
+              Gantry, table, cooling, power and image-quality inspection.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item gallery-wide"
+          data-category="installation"
+          tabindex="0"
+          role="button"
+          aria-label="View ultrasound installation project"
+        >
+          <figure>
+            <img
+              src="images/gallery/ultrasound-installation.jpg"
+              alt="Ultrasound equipment installation and commissioning"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Installation</span>
+            <h3>Ultrasound Installation and Commissioning</h3>
+            <p>
+              Installation, configuration, connectivity testing and functional
+              verification before clinical handover.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="critical-care"
+          tabindex="0"
+          role="button"
+          aria-label="View anesthesia machine service project"
+        >
+          <figure>
+            <img
+              src="images/gallery/anesthesia-machine-service.jpg"
+              alt="Anesthesia machine inspection and maintenance"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Critical Care</span>
+            <h3>Anesthesia Machine Inspection</h3>
+            <p>
+              Leak testing, flow verification, sensor checks and alarm testing.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="calibration"
+          tabindex="0"
+          role="button"
+          aria-label="View infusion pump calibration project"
+        >
+          <figure>
+            <img
+              src="images/gallery/infusion-pump-calibration.jpg"
+              alt="Infusion pump flow calibration"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Calibration</span>
+            <h3>Infusion Pump Flow Calibration</h3>
+            <p>
+              Flow accuracy, occlusion pressure and alarm-performance testing.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="dental"
+          tabindex="0"
+          role="button"
+          aria-label="View dental CBCT service project"
+        >
+          <figure>
+            <img
+              src="images/gallery/dental-cbct-service.jpg"
+              alt="Dental CBCT imaging equipment service"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dental Equipment</span>
+            <h3>Dental CBCT Technical Support</h3>
+            <p>
+              Image-system diagnostics, positioning checks and connectivity
+              support.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item gallery-wide"
+          data-category="installation"
+          tabindex="0"
+          role="button"
+          aria-label="View hospital equipment installation project"
+        >
+          <figure>
+            <img
+              src="images/gallery/hospital-equipment-installation.jpg"
+              alt="Hospital medical equipment installation project"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Installation</span>
+            <h3>Hospital Equipment Installation Project</h3>
+            <p>
+              Equipment positioning, assembly, electrical inspection,
+              commissioning and user handover.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="calibration"
+          tabindex="0"
+          role="button"
+          aria-label="View electrical safety testing project"
+        >
+          <figure>
+            <img
+              src="images/gallery/electrical-safety-testing.jpg"
+              alt="Electrical safety testing of medical equipment"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Calibration</span>
+            <h3>Electrical Safety Testing</h3>
+            <p>
+              Ground resistance, leakage current and insulation performance
+              checks.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="critical-care"
+          tabindex="0"
+          role="button"
+          aria-label="View defibrillator service project"
+        >
+          <figure>
+            <img
+              src="images/gallery/defibrillator-testing.jpg"
+              alt="Defibrillator energy output testing"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Critical Care</span>
+            <h3>Defibrillator Energy Verification</h3>
+            <p>
+              Energy output, ECG waveform, battery and accessory testing.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="dental"
+          tabindex="0"
+          role="button"
+          aria-label="View dental autoclave maintenance project"
+        >
+          <figure>
+            <img
+              src="images/gallery/dental-autoclave-service.jpg"
+              alt="Dental autoclave preventive maintenance"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dental Equipment</span>
+            <h3>Dental Autoclave Maintenance</h3>
+            <p>
+              Temperature, pressure, seal, heating and cycle-performance
+              inspection.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item"
+          data-category="imaging"
+          tabindex="0"
+          role="button"
+          aria-label="View X-ray system inspection project"
+        >
+          <figure>
+            <img
+              src="images/gallery/xray-system-inspection.jpg"
+              alt="Medical X-ray system inspection"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Diagnostic Imaging</span>
+            <h3>X-Ray System Inspection</h3>
+            <p>
+              Generator, detector, tube, collimator and mechanical movement
+              checks.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="gallery-item gallery-wide"
+          data-category="installation"
+          tabindex="0"
+          role="button"
+          aria-label="View medical equipment commissioning project"
+        >
+          <figure>
+            <img
+              src="images/gallery/equipment-commissioning.jpg"
+              alt="Biomedical engineer commissioning medical equipment"
+              loading="lazy"
+            >
+          </figure>
+
+          <div class="gallery-view-icon">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+
+          <div class="gallery-overlay">
+            <span class="gallery-category">Installation</span>
+            <h3>Medical Equipment Commissioning</h3>
+            <p>
+              Functional verification, safety checks, configuration and final
+              handover documentation.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery-load-more">
+        <button id="gallery-load-more" type="button">
+          Load More Projects
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- SERVICE PROCESS -->
+
+    <section class="gallery-process">
+      <div class="section-title">
+        <span class="section-tag">PROJECT WORKFLOW</span>
+
+        <h2>
+          From Inspection to Final Handover
+        </h2>
+
+        <p>
+          Every technical assignment follows a structured workflow designed to
+          improve accuracy, safety and accountability.
+        </p>
+      </div>
+
+      <div class="gallery-process-grid">
+
+        <article>
+          <span>01</span>
+          <i class="fa-solid fa-clipboard-list"></i>
+          <h3>Equipment Assessment</h3>
+          <p>
+            We review the equipment condition, fault history and service
+            requirements.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>Technical Diagnosis</h3>
+          <p>
+            Engineers perform functional checks, testing and fault isolation.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Engineering Service</h3>
+          <p>
+            Approved maintenance, repair, installation or calibration work is
+            completed.
+          </p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <i class="fa-solid fa-file-circle-check"></i>
+          <h3>Testing and Reporting</h3>
+          <p>
+            Equipment performance is verified and service findings are
+            documented.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+
+    <section class="gallery-trust">
+      <div class="gallery-trust-grid">
+
+        <div class="gallery-trust-image">
+          <img
+            src="images/gallery/biomedical-team-service.jpg"
+            alt="ICON BIOTRONICS biomedical engineering service team"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="gallery-trust-copy">
+          <span class="section-tag">PROFESSIONAL STANDARDS</span>
+
+          <h2>
+            Technical Work Backed by Clear Documentation
+          </h2>
+
+          <p>
+            The quality of a biomedical engineering service is measured not
+            only by the repair itself, but also by testing, traceability and
+            communication with the healthcare facility.
+          </p>
+
+          <div class="gallery-trust-list">
+
+            <article>
+              <i class="fa-solid fa-camera"></i>
+
+              <div>
+                <h3>Visual Service Records</h3>
+                <p>
+                  Project photographs may be recorded to support service history
+                  and technical reporting.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-solid fa-file-signature"></i>
+
+              <div>
+                <h3>Detailed Service Reports</h3>
+                <p>
+                  Reports document equipment findings, work completed, tests
+                  performed and recommendations.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-solid fa-shield-heart"></i>
+
+              <div>
+                <h3>Safety-Focused Testing</h3>
+                <p>
+                  Functional and safety verification is completed before
+                  equipment is returned to service.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <a href="contact.html" class="primary-btn">
+            Discuss Your Equipment
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="gallery-faq">
+      <div class="section-title">
+        <span class="section-tag">GALLERY QUESTIONS</span>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="gallery-faq-list">
+
+        <details>
+          <summary>
+            Are all gallery images from completed service projects?
+          </summary>
+
+          <p>
+            The gallery is intended to showcase representative biomedical
+            engineering work, equipment categories and service capabilities.
+            Images should only be published when suitable customer permissions
+            and confidentiality requirements have been addressed.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Can you service the same equipment shown in the gallery?
+          </summary>
+
+          <p>
+            Service capability depends on the equipment manufacturer, model,
+            technical condition and parts availability. Send the brand, model
+            and fault description to our team for confirmation.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Do you provide service reports with project photographs?
+          </summary>
+
+          <p>
+            Project photographs and technical findings can be included in
+            service documentation when appropriate and permitted by the
+            healthcare facility.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Can you support hospitals with multiple equipment categories?
+          </summary>
+
+          <p>
+            Yes. ICON BIOTRONICS can coordinate maintenance and repair support
+            across multiple equipment categories and facility locations.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="gallery-cta">
+      <h2>
+        Need Similar Support for Your Medical Equipment?
+      </h2>
+
+      <p>
+        Share the equipment brand, model, fault description and facility
+        location. Our biomedical engineering team will review your request and
+        recommend the appropriate service.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="primary-btn">
+          Request Technical Support
+        </a>
+
+        <a
+          href="https://wa.me/971553252589?text=Hello%20ICON%20BIOTRONICS,%20I%20need%20technical%20support%20for%20medical%20equipment."
+          class="secondary-btn"
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp Our Team
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ENQUIRY SECTION -->
+
+  <section aria-label="Project enquiry">
+    <div class="container">
+      <article class="gallery-enquiry-strip">
+        <hgroup>
+          <h2>Request a Biomedical Engineering Consultation</h2>
+          <h3>
+            Share your details and our technical team will contact you.
+          </h3>
+        </hgroup>
+
+        <form class="grid" action="#" method="post">
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Your name"
+            aria-label="Your name"
+            autocomplete="name"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Business email"
+            aria-label="Business email"
+            autocomplete="email"
+            required
+          >
+
+          <button type="submit">
+            Request Callback
+          </button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="container">
+    <div class="footer-grid">
+
+      <div>
+        <img
+          src="images/logo-white.png"
+          class="footer-logo"
+          alt="ICON BIOTRONICS"
+        >
+
+        <p>
+          Professional biomedical engineering services across the UAE,
+          including medical equipment repair, preventive maintenance,
+          calibration and technical support.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Core Services</h3>
+
+        <ul>
+          <li>
+            <a href="services/mri-ct-repair-uae.html">
+              MRI and CT Support
+            </a>
+          </li>
+
+          <li>
+            <a href="services/ventilator-repair-uae.html">
+              Ventilator Repair
+            </a>
+          </li>
+
+          <li>
+            <a href="services/ultrasound-repair-uae.html">
+              Ultrasound Service
+            </a>
+          </li>
+
+          <li>
+            <a href="services/dental-equipment-repair-uae.html">
+              Dental Equipment
+            </a>
+          </li>
+
+          <li>
+            <a href="services/medical-equipment-calibration-uae.html">
+              Calibration
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+
+        <p>
+          Dubai, United Arab Emirates
+        </p>
+
+        <p>
+          <a href="tel:+971553252589">
+            +971 55 325 2589
+          </a>
+        </p>
+
+        <p>
+          <a href="mailto:iconbiotronics.uae@gmail.com">
+            iconbiotronics.uae@gmail.com
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <small>
+      <a href="privacy.html">Privacy Policy</a>
+      •
+      <a href="terms.html">Terms of Service</a>
+    </small>
+
+    <div class="copyright">
+      © <span data-current-year>2026</span> ICON BIOTRONICS.
+      All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTIONS -->
+
+  <div class="floating-call">
+    <a href="tel:+971553252589" aria-label="Call ICON BIOTRONICS">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <div class="floating-whatsapp">
+    <a
+      href="https://wa.me/971553252589?text=Hello%20ICON%20BIOTRONICS,%20I%20need%20medical%20equipment%20service."
+      target="_blank"
+      aria-label="Contact ICON BIOTRONICS on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX -->
+
+  <div
+    id="gallery-lightbox"
+    class="gallery-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery image viewer"
+    aria-hidden="true"
+  >
+    <div class="gallery-lightbox-content">
+
+      <button
+        type="button"
+        class="gallery-lightbox-close"
+        aria-label="Close image viewer"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <button
+        type="button"
+        class="gallery-lightbox-prev"
+        aria-label="View previous image"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <img
+        class="gallery-lightbox-image"
+        src=""
+        alt=""
+      >
+
+      <button
+        type="button"
+        class="gallery-lightbox-next"
+        aria-label="View next image"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="gallery-lightbox-caption">
+        <strong></strong>
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCHEMA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "ICON BIOTRONICS Biomedical Engineering Project Gallery",
+    "description": "A gallery of medical equipment maintenance, repair, calibration, installation and biomedical engineering projects completed across the UAE.",
+    "url": "https://iconbiotronics.com/gallery.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "ICON BIOTRONICS",
+      "url": "https://iconbiotronics.com",
+      "telephone": "+971553252589",
+      "email": "iconbiotronics.uae@gmail.com"
+    },
+    "about": [
+      "Biomedical Engineering",
+      "Medical Equipment Repair",
+      "Medical Equipment Calibration",
+      "Preventive Maintenance",
+      "Medical Equipment Installation"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can ICON BIOTRONICS service the same equipment shown in the gallery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Service capability depends on the equipment manufacturer, model, technical condition and parts availability. Customers can send the brand, model and fault description for confirmation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide service reports with project photographs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Project photographs and technical findings can be included in service documentation when appropriate and permitted by the healthcare facility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you support hospitals with multiple equipment categories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ICON BIOTRONICS can coordinate maintenance and repair support across multiple equipment categories and facility locations."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+
+  <script>
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = Array.from(
+        document.querySelectorAll(".gallery-filter")
+      );
+
+      const galleryItems = Array.from(
+        document.querySelectorAll(".gallery-item")
+      );
+
+      const loadMoreButton = document.getElementById("gallery-load-more");
+
+      const lightbox = document.getElementById("gallery-lightbox");
+      const lightboxImage = lightbox?.querySelector(
+        ".gallery-lightbox-image"
+      );
+
+      const lightboxTitle = lightbox?.querySelector(
+        ".gallery-lightbox-caption strong"
+      );
+
+      const lightboxCategory = lightbox?.querySelector(
+        ".gallery-lightbox-caption span"
+      );
+
+      const closeButton = lightbox?.querySelector(
+        ".gallery-lightbox-close"
+      );
+
+      const previousButton = lightbox?.querySelector(
+        ".gallery-lightbox-prev"
+      );
+
+      const nextButton = lightbox?.querySelector(
+        ".gallery-lightbox-next"
+      );
+
+      const initialVisibleCount = 9;
+      let selectedCategory = "all";
+      let visibleLimit = initialVisibleCount;
+      let currentImageIndex = 0;
+      let visibleGalleryItems = [...galleryItems];
+
+      const updateGallery = () => {
+        const matchingItems = galleryItems.filter((item) => {
+          const category = item.dataset.category;
+
+          return (
+            selectedCategory === "all" ||
+            category === selectedCategory
+          );
+        });
+
+        visibleGalleryItems = matchingItems;
+
+        galleryItems.forEach((item) => {
+          item.classList.add("gallery-hidden");
+          item.setAttribute("aria-hidden", "true");
+        });
+
+        matchingItems.slice(0, visibleLimit).forEach((item) => {
+          item.classList.remove("gallery-hidden");
+          item.setAttribute("aria-hidden", "false");
+        });
+
+        if (!loadMoreButton) return;
+
+        if (matchingItems.length > visibleLimit) {
+          loadMoreButton.hidden = false;
+        } else {
+          loadMoreButton.hidden = true;
+        }
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedCategory = button.dataset.filter || "all";
+          visibleLimit = initialVisibleCount;
+
+          filterButtons.forEach((currentButton) => {
+            currentButton.classList.remove("active");
+            currentButton.setAttribute("aria-pressed", "false");
+          });
+
+          button.classList.add("active");
+          button.setAttribute("aria-pressed", "true");
+
+          updateGallery();
+        });
+      });
+
+      if (loadMoreButton) {
+        loadMoreButton.addEventListener("click", () => {
+          visibleLimit += 6;
+          updateGallery();
+        });
+      }
+
+      const openLightbox = (item) => {
+        if (
+          !lightbox ||
+          !lightboxImage ||
+          !lightboxTitle ||
+          !lightboxCategory
+        ) {
+          return;
+        }
+
+        const image = item.querySelector("img");
+        const title = item.querySelector(".gallery-overlay h3");
+        const category = item.querySelector(".gallery-category");
+
+        if (!image) return;
+
+        visibleGalleryItems = galleryItems.filter(
+          (galleryItem) =>
+            !galleryItem.classList.contains("gallery-hidden")
+        );
+
+        currentImageIndex = visibleGalleryItems.indexOf(item);
+
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        lightboxTitle.textContent = title?.textContent || image.alt;
+        lightboxCategory.textContent =
+          category?.textContent || "ICON BIOTRONICS Project";
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+
+        closeButton?.focus();
+      };
+
+      const closeLightbox = () => {
+        if (!lightbox) return;
+
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+
+        if (lightboxImage) {
+          lightboxImage.src = "";
+        }
+      };
+
+      const showGalleryImage = (direction) => {
+        if (!visibleGalleryItems.length) return;
+
+        currentImageIndex += direction;
+
+        if (currentImageIndex < 0) {
+          currentImageIndex = visibleGalleryItems.length - 1;
+        }
+
+        if (currentImageIndex >= visibleGalleryItems.length) {
+          currentImageIndex = 0;
+        }
+
+        const item = visibleGalleryItems[currentImageIndex];
+        const image = item.querySelector("img");
+        const title = item.querySelector(".gallery-overlay h3");
+        const category = item.querySelector(".gallery-category");
+
+        if (
+          !image ||
+          !lightboxImage ||
+          !lightboxTitle ||
+          !lightboxCategory
+        ) {
+          return;
+        }
+
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        lightboxTitle.textContent = title?.textContent || image.alt;
+        lightboxCategory.textContent =
+          category?.textContent || "ICON BIOTRONICS Project";
+      };
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          openLightbox(item);
+        });
+
+        item.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(item);
+          }
+        });
+      });
+
+      closeButton?.addEventListener("click", closeLightbox);
+
+      previousButton?.addEventListener("click", () => {
+        showGalleryImage(-1);
+      });
+
+      nextButton?.addEventListener("click", () => {
+        showGalleryImage(1);
+      });
+
+      lightbox?.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox?.classList.contains("active")) return;
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+
+        if (event.key === "ArrowLeft") {
+          showGalleryImage(-1);
+        }
+
+        if (event.key === "ArrowRight") {
+          showGalleryImage(1);
+        }
+      });
+
+      filterButtons.forEach((button, index) => {
+        button.setAttribute(
+          "aria-pressed",
+          index === 0 ? "true" : "false"
+        );
+      });
+
+      updateGallery();
+    });
+  </script>
+
+</body>
+</html>
